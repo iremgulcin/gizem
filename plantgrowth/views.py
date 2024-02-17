@@ -1,19 +1,23 @@
 from django.shortcuts import render
-
 from . import models  # Kullanıcı girdilerini almak için oluşturduğunuz form
 import pandas as pd
-import numpy as np
 from .models import rf_model_ec_transformed  # Modelinizi Django projesine dahil ettiğiniz yer
 from django.http import HttpResponse
-
-
+from .models import rf_model_new_water  # Modelinizi import edin
+from .models import clf  # Eğitilmiş modelinizi import edin
+import joblib
 from django.shortcuts import render
 from .forms import PredictionForm  # Önceden oluşturduğunuz form
 from .forms import  EmissionPredictionForm
 from .models import rf_model_ec_transformed  # Modelinizi import edin
-import numpy as np
 import pandas as pd
 from django.http import JsonResponse
+from .forms import EmissionPredictionForm  # Önceden oluşturduğunuz form
+from .models import rf_model_n2o  # Modelinizi import edin
+import numpy as np
+
+
+from .models import rf_model_nutrients  # Modelinizi import edin
 
 def predict_ec(request):
     if request.method == 'POST':
@@ -44,7 +48,6 @@ def predict_ec(request):
 
 
 
-from .models import rf_model_nutrients  # Modelinizi import edin
 
 def predict_nutrients(request):
     if request.method == 'POST':
@@ -63,14 +66,14 @@ def predict_nutrients(request):
             prediction = rf_model_nutrients.predict(X_new)
             
             # Tahmin sonucunu context'e ekleyip template'e gönder
-            return JsonResponse({'Optimize besin degerleri': prediction[0].tolist()})
+            return JsonResponse({'Optimize besin degerleri (Na, K, Mg, Ca, N)': prediction[0].tolist()})
     else:
         form = PredictionForm()
 
     return render(request, 'predict_nutrients_result.html', {'form': form})
 
 
-from .models import rf_model_new_water  # Modelinizi import edin
+
 
 def predict_water(request):
     if request.method == 'POST':
@@ -98,13 +101,10 @@ def predict_water(request):
 
            
 
-from .forms import EmissionPredictionForm  # Önceden oluşturduğunuz form
-from .models import rf_model_n2o  # Modelinizi import edin
-
 
 def predict_n2o(request):
     if request.method == 'POST':
-        form = PredictionForm(request.POST)
+        form = EmissionPredictionForm(request.POST)
         if form.is_valid():
             # Formdan verileri al ve DataFrame hazırla
             cleaned_data = form.cleaned_data
@@ -125,15 +125,13 @@ def predict_n2o(request):
             
             return JsonResponse({'N2O Emisyonu': prediction[0]})
     else:
-        form = PredictionForm()
+        form = EmissionPredictionForm()
 
     return render(request, 'predict_n2o_result.html', {'form': form})
 
 
 
 
-
-import joblib
 
 def predict_co2(request):
     if request.method == 'POST':
@@ -191,11 +189,6 @@ def predict_ch4(request):
     return render(request, 'predict_ch4_result.html', {'form': form})
 
 
-
-
-from .models import clf  # Eğitilmiş modelinizi import edin
-
-
 def predict_substrate(request):
     if request.method == 'POST':
         form = EmissionPredictionForm(request.POST)
@@ -220,6 +213,7 @@ def predict_substrate(request):
             # Sonucu göster
             return JsonResponse({'Optimize Substrat': prediction[0]})
     else:
-        form = PredictionForm()
+        form = EmissionPredictionForm()
 
     return render(request, 'predict_substrat_result.html', {'form': form})
+
