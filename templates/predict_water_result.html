@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Su Tahmini</title>
+    <style>
+        body {
+            background-color:lightgreen
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Hydroponic Ortamda Domates Yetiştiriciliği</h2>
+    <h4>Btikiniz İçin En Optimize Edilmiş Değerlerle Sürdürülebilirliğe Katkıda Bulunun, En Kırmızı Domateslere Siz Sahip Olun!</h4>
+    <form method="post" action="plantgrowth/predict_water">
+        {% csrf_token %}
+        <label for="days_since_planting">Transplasyondan Sonra Geçen Gün Sonra Sayısı:</label><br>
+        <input type="number" id="days_since_planting" name="days_since_planting" required><br>
+        <label for="T_avg">Ortalama Sıcaklık (T_avg):</label><br>
+        <input type="number" step="any" id="T_avg" name="T_avg" required><br>
+        <label for="CO2_avg">Ortalama CO2 (CO2_avg):</label><br>
+        <input type="number" step="any" id="CO2_avg" name="CO2_avg" required><br>
+        <input type="submit" value="Tahmin Et">
+    </form>
+</body>
+</html>
