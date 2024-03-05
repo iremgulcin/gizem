@@ -1,90 +1,27 @@
----
-# Dataset Card
----
+**Dataset Card**
 
-# Dataset Card for {{ pretty_name | default("Dataset Name", true) }}
+**Dataset Name:** AI Model for Hydroponic Tomato Plant Optimization
 
-<!-- Provide a quick summary of the dataset. -->
+**Dataset Summary:** This dataset aims to develop an AI model for optimizing nutrient uptake, water usage, and greenhouse gas emissions for hydroponic tomato plants. By leveraging data-driven insights, the model minimizes waste and maximizes efficiency, contributing to sustainable agricultural practices.
 
-{{ dataset_summary | default("", true) }}
+**Dataset Details**
 
-## Dataset Details
-
-### Dataset Description
-
-<!-- Provide a longer summary of what this dataset is. -->
-
-{{ dataset_description | default("", true) }}
-
-- **Curated by:** {{ curators | default("[More Information Needed]", true)}}
-- **License:** {{ license | default("[More Information Needed]", true)}}
-
-### Dataset Sources [optional]
-
-<!-- Provide the basic links for the dataset. -->
-
-- **Repository:** {{ repo | default("[More Information Needed]", true)}}
-- **Paper [optional]:** {{ paper | default("[More Information Needed]", true)}}
-- **Demo [optional]:** {{ demo | default("[More Information Needed]", true)}}
-
-## Uses
-
-<!-- Address questions around how the dataset is intended to be used. -->
-
-### Direct Use
-
-<!-- This section describes suitable use cases for the dataset. -->
-
-{{ direct_use | default("[More Information Needed]", true)}}
+**Dataset Description:** The dataset facilitates the development of an AI model aimed at determining the optimal conditions for hydroponic tomato cultivation. It focuses on optimizing nutrient compositions, establishing ideal electrical conductivity (EC) limits, managing water usage, and providing insights into gas emissions like CO2 and CH4.
 
 
-## Dataset Structure
 
-<!-- This section provides a description of the dataset fields, and additional information about the dataset structure such as criteria used to create the splits, relationships between data points, etc. -->
+**Dataset Sources:**
 
-{{ dataset_structure | default("[More Information Needed]", true)}}
+1. Signore, A., Serio, F., & Santamaria, P. (2016). A Targeted Management of the Nutrient Solution in a Soilless Tomato Crop According to Plant Needs. Frontiers in Plant Science, 30 March 2016. [Link](https://doi.org/10.3389/fpls.2016.00391)
+2. Karlowsky, S., Gläser, M., Henschel, K., & Schwarz, D. (2021). Seasonal Nitrous Oxide Emissions From Hydroponic Tomato and Cucumber Cultivation in a Commercial Greenhouse Company. Frontiers in Sustainable Food Systems, 5, 626053. [Link](https://doi.org/10.3389/fsufs.2021.626053)
 
-## Dataset Creation
+**Model:** The Random Forest algorithm was chosen for its proficiency in handling high-dimensional data and intricate relationships among variables in hydroponic tomato cultivation. To refine the model, Randomized Grid Search was utilized for hyperparameter tuning, particularly for accurately predicting CO2 and CH4 emissions. This approach efficiently explores the vast hyperparameter space, enhancing the model's precision in estimating greenhouse gas emissions and contributing to a deeper understanding of their impact on the sustainability of hydroponic farming practices.
 
-### Source Data
+**Uses**
 
-<!-- This section describes the source data (e.g. news text and headlines, social media posts, translated sentences, ...). -->
-
-#### Data Collection and Processing
-
-<!-- This section describes the data collection and processing process such as data selection criteria, filtering and normalization methods, tools and libraries used, etc. -->
-
-{{ data_collection_and_processing_section | default("[More Information Needed]", true)}}
-
-#### Features and the target
-
-<!-- This section describes the features of the dataset and the target of the project -->
-
-### Annotations [optional]
-
-<!-- If the dataset contains annotations which are not part of the initial data collection, use this section to describe them. -->
-
-#### Annotation process
-
-<!-- This section describes the annotation process such as annotation tools used in the process, the amount of data annotated, annotation guidelines provided to the annotators, interannotator statistics, annotation validation, etc. -->
-
-{{ annotation_process_section | default("[More Information Needed]", true)}}
-
-#### Who are the annotators?
-
-<!-- This section describes the people or systems who created the annotations. -->
-
-{{ who_are_annotators_section | default("[More Information Needed]", true)}}
+**Direct Use:** The dataset directly contributes to the development of an AI model for enhancing the sustainability and efficiency of hydroponic tomato cultivation.
 
 
-## Bias, Risks, and Limitations
+**Features and the Target:** The dataset includes features related to hydroponic tomato cultivation, such as temperature, dry matter, electrical conductivity (EC), nutrient values, and gas emissions like CO2 and CH4. The target is to optimize nutrient uptake, water usage, and greenhouse gas emissions.
 
-<!-- This section is meant to convey both technical and sociotechnical limitations. -->
-
-{{ bias_risks_limitations | default("[More Information Needed]", true)}}
-
-
-## Citation [optional]
-
-<!-- If there is a paper or blog post introducing the dataset, the APA and Bibtex information for that should go in this section. -->
 
