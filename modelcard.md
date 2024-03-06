@@ -1,11 +1,13 @@
 ---
 # MODEL CARD
 
-# Model Card for {{ model_id | default("Model ID", true) }}
+# Model ID: Hydroponic_Tomato_Optimization_Model
 
 <!-- Provide a quick summary of what the model is/does. -->
 
-{{ model_summary | default("", true) }}
+**Model Summary:**
+
+This model aims to develop an AI system for optimizing hydroponic tomato cultivation by determining optimal nutrient uptake, water usage, and greenhouse gas emissions. It leverages data-driven insights to minimize waste and maximize efficiency, contributing to sustainable agriculture.
 
 ## Model Details
 
@@ -15,19 +17,11 @@
 
 {{ model_description | default("", true) }}
 
-- **Developed by:** {{ developers | default("[More Information Needed]", true)}}
-- **Model date:** {{ model_date | default("[More Information Needed]", true)}}
-- **Model type:** {{ model_type | default("[More Information Needed]", true)}}
-- **Language(s):** {{ language | default("[More Information Needed]", true)}}
-- **Finetuned from model [optional]:** {{ base_model | default("[More Information Needed]", true)}}
+- **Developed by:** Gizem Yüksel
+- **Model date:** 17.02.2024
+- **Model type:** Machine Learning
+- **Language(s):** Python
 
-### Model Sources [optional]
-
-<!-- Provide the basic links for the model. -->
-
-- **Repository:** {{ repo | default("[More Information Needed]", true)}}
-- **Paper [optional]:** {{ paper | default("[More Information Needed]", true)}}
-- **Demo [optional]:** {{ demo | default("[More Information Needed]", true)}}
 
 ## Uses
 
@@ -35,15 +29,7 @@
 
 ### Direct Use
 
-<!-- This section is for the model use without fine-tuning or plugging into a larger ecosystem/app. -->
-
-{{ direct_use | default("[More Information Needed]", true)}}
-
-### Downstream Use [optional]
-
-<!-- This section is for the model use when fine-tuned for a task, or when plugged into a larger ecosystem/app -->
-
-{{ downstream_use | default("[More Information Needed]", true)}}
+Direct Use: The model is directly used to optimize hydroponic tomato cultivation.
 
 ### Out-of-Scope Use
 
@@ -53,15 +39,11 @@
 
 ## Bias, Risks, and Limitations
 
-<!-- This section is meant to convey both technical and sociotechnical limitations. -->
-
-{{ bias_risks_limitations | default("[More Information Needed]", true)}}
+The model may not provide accurate results at very high temperatures or extreme conditions because it does not have enough data.
 
 ### Recommendations
 
-<!-- This section is meant to convey recommendations with respect to the bias, risk, and technical limitations. -->
-
-{{ bias_recommendations | default("Users (both direct and downstream) should be made aware of the risks, biases and limitations of the model. More information needed for further recommendations.", true)}}
+Users should be made aware of the risks, biases, and limitations of the model. 
 
 ## How to Get Started with the Model
 
@@ -81,20 +63,13 @@ Use the code below to get started with the model.
 
 <!-- This relates heavily to the Technical Specifications. Content here should link to that section when it is relevant to the training procedure. -->
 
-#### Preprocessing [optional]
-
-{{ preprocessing | default("[More Information Needed]", true)}}
 
 
 #### Training Hyperparameters
 
 - **Training regime:** {{ training_regime | default("[More Information Needed]", true)}} <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
 
-#### Speeds, Sizes, Times [optional]
 
-<!-- This section provides information about throughput, start/end time, checkpoint size if relevant, etc. -->
-
-{{ speeds_sizes_times | default("[More Information Needed]", true)}}
 
 ## Evaluation
 
@@ -127,46 +102,6 @@ Use the code below to get started with the model.
 #### Summary
 
 {{ results_summary | default("", true) }}
-
-## Model Examination [optional]
-
-<!-- Relevant interpretability work for the model goes here -->
-
-{{ model_examination | default("[More Information Needed]", true)}}
-
-
-## Technical Specifications [optional]
-
-### Model Architecture and Objective
-
-{{ model_specs | default("[More Information Needed]", true)}}
-
-### Compute Infrastructure
-
-{{ compute_infrastructure | default("[More Information Needed]", true)}}
-
-#### Hardware
-
-{{ hardware_requirements | default("[More Information Needed]", true)}}
-
-#### Software
-
-{{ software | default("[More Information Needed]", true)}}
-
-## Citation [optional]
-
-<!-- If there is a paper or blog post introducing the model, the APA and Bibtex information for that should go in this section. -->
-
-
-## Glossary [optional]
-
-<!-- If relevant, include terms and calculations in this section that can help readers understand the model or model card. -->
-
-{{ glossary | default("[More Information Needed]", true)}}
-
-## More Information [optional]
-
-{{ more_information | default("[More Information Needed]", true)}}
 
 
 
