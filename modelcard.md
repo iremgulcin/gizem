@@ -43,7 +43,9 @@ The model may not provide accurate results at very high temperatures or extreme 
 
 ### Recommendations
 
-Users should be made aware of the risks, biases, and limitations of the model. 
+Users should be made aware of the risks, biases, and limitations of the model:
+
+When entering ambient conditions values, entering values close to optimal values allows for a much more accurate result.
 
 ## How to Get Started with the Model
 
@@ -61,47 +63,19 @@ Use the code below to get started with the model.
 
 ### Training Procedure
 
-<!-- This relates heavily to the Technical Specifications. Content here should link to that section when it is relevant to the training procedure. -->
-
+**Training features:**
+EC limit, number of days after translation, temperature and water rate.
 
 
 #### Training Hyperparameters
 
-- **Training regime:** {{ training_regime | default("[More Information Needed]", true)}} <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
-
+To refine the model, particularly for predicting CO2 and CH4 emissions accurately, we employed Randomized Grid Search for hyperparameter tuning. This method efficiently explores the hyperparameter space without exhaustive computation, leading to enhanced model precision in estimating greenhouse gas emissions.
 
 
 ## Evaluation
 
-<!-- This section describes the evaluation protocols and provides the results. -->
+Utilizing the Random Forest algorithm and Randomized Grid Search significantly enhances hydroponic tomato cultivation's sustainability and efficiency. By optimizing nutrient compositions, establishing ideal electrical conductivity limits, and managing water usage, we minimize resource wastage and environmental impact. This project aligns technological advancements with environmental responsibility, showcasing a model for future sustainable farming practices.
 
-### Testing Data, Factors & Metrics
-
-#### Testing Data
-
-<!-- This should link to a Dataset Card if possible. -->
-
-{{ testing_data | default("[More Information Needed]", true)}}
-
-#### Factors
-
-<!-- These are the things the evaluation is disaggregating by, e.g., subpopulations or domains. -->
-
-{{ testing_factors | default("[More Information Needed]", true)}}
-
-#### Metrics
-
-<!-- These are the evaluation metrics being used, ideally with a description of why. Decision tresholds, model performance measures -->
-
-{{ testing_metrics | default("[More Information Needed]", true)}}
-
-### Results
-
-{{ results | default("[More Information Needed]", true)}}
-
-#### Summary
-
-{{ results_summary | default("", true) }}
 
 
 
