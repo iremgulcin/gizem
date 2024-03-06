@@ -30,3 +30,11 @@ To refine the model, particularly for predicting CO2 and CH4 emissions accuratel
 ## Output:
 
 Utilizing the Random Forest algorithm and Randomized Grid Search significantly enhances hydroponic tomato cultivation's sustainability and efficiency. By optimizing nutrient compositions, establishing ideal electrical conductivity limits, and managing water usage, we minimize resource wastage and environmental impact. This project aligns technological advancements with environmental responsibility, showcasing a model for future sustainable farming practices.
+
+
+<img src="https://github.com/iremgulcin/gizem/blob/main/Screenshot%20(626).png" width="auto">
+
+
+
+
+
