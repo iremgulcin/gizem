@@ -19,9 +19,13 @@ Karlowsky, S., Gläser, M., Henschel, K., & Schwarz, D. (2021). Link
 ## SDG:
 
 SDG 2: Zero Hunger
+
 SDG 3: Good Health and Well-being
+
 SDG 12: Responsible Consumption and Production
+
 SDG 13: Climate Action
+
 SDG 15: Life on Land
 
 ## Feature Engineering:
