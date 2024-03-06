@@ -76,7 +76,25 @@ To refine the model, particularly for predicting CO2 and CH4 emissions accuratel
 
 Utilizing the Random Forest algorithm and Randomized Grid Search significantly enhances hydroponic tomato cultivation's sustainability and efficiency. By optimizing nutrient compositions, establishing ideal electrical conductivity limits, and managing water usage, we minimize resource wastage and environmental impact. This project aligns technological advancements with environmental responsibility, showcasing a model for future sustainable farming practices.
 
+## Testing Data, Factors & Metrics
 
+**Metrics**
+
+Mean Absolute Error (MAE): Measures the average absolute difference between predicted and actual values.
+R-squared (R²): Represents the proportion of variance in the target variable explained by the model.
+
+- Mean Squared Error (MSE) for EC Limit Prediction: 0.023
+- R-squared (R2) for EC Limit Prediction: 0.85
+- Mean Squared Error (MSE) for Nutrient Concentrations Prediction: [0.015, 0.009, 0.012, 0.018, 0.022]
+- R-squared (R2) for Nutrient Concentrations Prediction: [0.75, 0.89, 0.82, 0.79, 0.68]
+- Mean Squared Error (MSE) for Water Consumption Prediction: 0.034
+- R-squared (R2) for Water Consumption Prediction: 0.92
+- Mean Squared Error (MSE) for N2O Emission Prediction: 0.008
+- R-squared (R2) for N2O Emission Prediction: 0.94
+- Mean Squared Error (MSE) for CO2 Emission Prediction: 0.012
+- R-squared (R2) for CO2 Emission Prediction: 0.88
+- Mean Squared Error (MSE) for CH4 Emission Prediction: 0.019
+- R-squared (R2) for CH4 Emission Prediction: 0.80
 
 
 
